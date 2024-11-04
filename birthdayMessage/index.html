@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  <body>
+    <marquee class="marquee-text" behavior="scroll" direction="left">
+      May your day be filled with joy and blessings. Wishing you good health,
+      happiness, and success. Happy Birthday!
+    </marquee>
+
+    <div class="card">
+      <img
+        src="./image/birthday girl.png"
+        width="100px;"
+        height="100px"
+        style="border-radius: 100%"
+      />
+      <h1>Happy Birthday Esther!</h1>
+      <p>Wishing you a day filled with happiness and joy!</p>
+      <audio controls>
+        <source
+          src="happy-birthday-220024.mp3"
+          type="audio/mpeg"
+          style="width: 100px"
+        />
+      </audio>
+    </div>
+
+    <div class="floating-container">
+      <img
+        src="./image/b (7).png"
+        alt="Floating Image 3"
+        class="floating-image"
+      />
+      <img src="./image/b (1).png" alt="" class="floating-image" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        anime({
+          targets: ".floating-image",
+          translateX: () => anime.random(-100, 200),
+          translateY: () => anime.random(-200, 200),
+          rotate: () => anime.random(-360, 360),
+          duration: 4000,
+          easing: "easeInOutQuad",
+          loop: true,
+          direction: "alternate",
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+/* Reset and general styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Main Navigation */
+nav ul {
+  display: flex;
+  margin-left: auto;
+}
+.list_item {
+  list-style: none; /* Remove default list style */
+  margin: 15px 0; /* Add spacing between items */
+  padding: 15px; /* Add padding inside each box */
+  background-color: #fff; /* White background for the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  display: flex;
+  margin: 0 15px;
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+.box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  list-style: none;
+  list-style-type: none;
+}
+
+ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none; /* Hidden by default */
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  color: white;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide by default on mobile */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+  }
+
+  .box {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Align items to the start */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+}
+
+nav ul li {
+  margin: 10px 0;
+  text-align: center;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 10px;
+  display: block;
+}
+
+/* Section Styling */
+section {
+  padding: 20px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
+section:hover {
+  background-color: #e0f7fa;
+}
+
+section h1,
+section h2 {
+  color: #333;
+}
+
+#about {
+  background-color: #f0f0f0;
+  padding: 40px;
+  text-align: center;
+}
+
+#projects,
+#skills,
+#contact,
+#portfolio {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dream</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  <body>
+    <section class="profile animate-element">
+      <img
+        src="./image/birthday girl.png"
+        alt="Future Engineer"
+        class="profile-pic"
+      />
+      <h1>John's Dream: Becoming an Engineer</h1>
+    </section>
+    <section class="about animate-element">
+      <h2>About Me</h2>
+      <p>
+        Hello! My name is John, and I have always been fascinated by how things
+        work. I love building things, solving problems, and using my creativity
+        to improve the world. My dream is to become an Engineer, where I can
+        help design and build the future. From roads and bridges to technology,
+        I believe engineers can change the world!
+      </p>
+    </section>
+    <section class="career animate-element">
+      <h2>What I Will Do as an Engineer</h2>
+      <ul>
+        <li>
+          <strong>Design and Build:</strong> I want to design and build amazing
+          things, like bridges, buildings, or even robots that can help people!
+        </li>
+        <li>
+          <strong>Problem Solving:</strong> As an engineer, I’ll solve
+          real-world problems, like making cleaner energy or improving
+          transportation.
+        </li>
+        <li>
+          <strong>Innovate:</strong> I will bring new ideas to life, create
+          technologies that make life better, and invent solutions for a
+          sustainable future.
+        </li>
+      </ul>
+    </section>
+    <section class="vision animate-element">
+      <h2>My Vision to Change the World</h2>
+      <p>
+        I believe that engineers are the creators of the future. I will work to
+        make sustainable buildings, clean energy solutions, and smart cities
+        that will help improve the lives of millions of people. I want to be
+        part of a generation of engineers that tackles climate change, builds
+        safer communities, and develops technologies that make the world more
+        connected.
+      </p>
+    </section>
+
+    <section class="education animate-element">
+      <h2>My Education Journey</h2>
+      <p>
+        I plan to study engineering in university, where I will learn about
+        physics, mathematics, and advanced technologies. I will also participate
+        in science fairs and build projects that showcase my passion for
+        engineering.
+      </p>
+    </section>
+    <section class="inspiration animate-element">
+      <h2>My Inspirations</h2>
+      <ul>
+        <li>
+          <strong>Elon Musk:</strong> His work in engineering sustainable energy
+          and space travel is something I look up to.
+        </li>
+        <li>
+          <strong>My Dad:</strong> He’s always been there to support my passion
+          for building things, from toy cars to Lego robots!
+        </li>
+      </ul>
+    </section>
+    <section class="cta animate-element">
+      <h2>Join Me in Changing the World!</h2>
+      <p>
+        If you have a dream to change the world, share it with me! Together, we
+        can build a brighter future.
+      </p>
+      <button>Share Your Dream</button>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animate elements on page load
+        anime({
+          targets: ".animate-element",
+          translateY: [50, 0],
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: anime.stagger(200),
+        });
+
+        // Animate button on hover
+        const button = document.querySelector("button");
+        button.addEventListener("mouseenter", () => {
+          anime({
+            targets: button,
+            scale: 1.1,
+            duration: 300,
+            easing: "easeOutQuad",
+          });
+        });
+        button.addEventListener("mouseleave", () => {
+          anime({
+            targets: button,
+            scale: 1,
+            duration: 300,
+            easing: "easeOutQuad",
+          });
+        });
+
+        // Animate profile picture on click
+        const profilePic = document.querySelector(".profile-pic");
+        profilePic.addEventListener("click", () => {
+          anime({
+            targets: profilePic,
+            rotate: "360deg",
+            duration: 1000,
+            easing: "easeInOutQuad",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

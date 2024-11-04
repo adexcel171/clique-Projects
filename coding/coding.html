@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Coding Academy</title>
+    <link rel="stylesheet" href="coding.css" />
+    <!-- Add AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Coding</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#teachers">Our Teachers</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" data-aos="fade-up">
+      <h2>Welcome to Our Coding Academy!</h2>
+      <p>Learn coding from the best teachers and build amazing projects!</p>
+      <a href="#teachers" class="cta-button">Meet Our Teachers</a>
+    </section>
+
+    <section id="about" data-aos="fade-right">
+      <h2>About Us</h2>
+      <p>
+        At Coding Academy, we empower kids to learn coding through fun and
+        engaging activities. Our mission is to make coding accessible and
+        enjoyable for everyone.
+      </p>
+    </section>
+
+    <section id="teachers" data-aos="fade-left">
+      <h2>Our Teachers</h2>
+      <p>
+        Our talented teachers are here to guide you through your coding journey.
+        They bring experience and enthusiasm to every lesson!
+      </p>
+      <ul>
+        <li>Mr. Smith - Expert in HTML, CSS, and JavaScript</li>
+        <li>Ms. Johnson - Specializes in Python and game development</li>
+        <li>Mr. Lee - Focuses on web design and creativity</li>
+      </ul>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions or want to learn more, feel free to reach out!
+      </p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Coding Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- Add AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+/* style.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #ffd700; /* Bright yellow background */
+  background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+#clock-container {
+  text-align: center;
+  background-color: #ff69b4;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 5px solid #4caf50;
+}
+
+#clock {
+  font-size: 64px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* Add a fun title above the clock */
+#clock-container::before {
+  content: "Fun Time!";
+  display: block;
+  font-size: 36px;
+  color: #4caf50; /* Green text */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Add some animated stars around the clock */
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.star {
+  position: absolute;
+  font-size: 24px;
+  color: #ffd700; /* Gold color */
+  animation: twinkle 1.5s infinite;
+}
+
+.star:nth-child(1) {
+  top: 20%;
+  left: 10%;
+}
+.star:nth-child(2) {
+  top: 15%;
+  right: 20%;
+}
+.star:nth-child(3) {
+  bottom: 25%;
+  left: 15%;
+}
+.star:nth-child(4) {
+  bottom: 20%;
+  right: 10%;
+}
